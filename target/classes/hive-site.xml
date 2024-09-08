@@ -1,0 +1,56 @@
+<configuration>
+        <property>
+                <name>javax.jdo.option.ConnectionURL</name>
+                <value>jdbc:mysql://:3306/hive?createDatabaseIfNotExist=true</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionDriverName</name>
+                <value>com.mysql.jdbc.Driver</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionUserName</name>
+                <value>root</value>
+        </property>
+        <property>
+                <name>javax.jdo.option.ConnectionPassword</name>
+                <value>111111</value>
+        </property>
+
+        <property>
+            <name>hive.metastore.warehouse.dir</name>
+            <value>/usr/hive/warehouse</value>
+        </property>
+        <property>
+            <name>hive.exec.scratchdir</name>
+            <value>/usr/hive/tmp</value>
+        </property>
+        <property>
+            <name>hive.querylog.location</name>
+            <value>/usr/hive/log</value>
+        </property>
+
+            <property>
+            <name>hive.metastore.uris</name>
+            <value>thrift://master:9083</value>
+        </property>
+
+
+        <property>
+            <name>yarn.app.mapreduce.am.command-opts</name>
+            <value>-Djava.net.preferIPv4Stack=true -Xmx500m</value>
+        </property>
+        <property>
+            <name>mapreduce.map.java.opts</name>
+            <value>-Djava.net.preferIPv4Stack=true -Xmx1024m</value>
+        </property>
+        <property>
+            <name>mapreduce.reduce.java.opts</name>
+            <value>-Djava.net.preferIPv4Stack=true -Xmx1024m</value>
+        </property>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>master:2181,slave1:2181,slave2:2181</value>
+    </property>
+
+</configuration>
+

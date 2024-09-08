@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Aug 14 02:14:51 CST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0173-e908-2262-0000397d9c50 
+on database directory /Users/luxu/Desktop/project/script/大数据/recsys_music11/s16/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@3ea30d62 
+Loaded from file:/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/pyspark/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_241-b07
+user.dir=/Users/luxu/Desktop/project/script/大数据/recsys_music11/s16
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

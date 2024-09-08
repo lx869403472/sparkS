@@ -1,0 +1,16 @@
+# kubectl apply -f service.yanl
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-at
+spec:
+  selector:
+    app: test-at
+  type: ClusterIP
+  ports:
+    - port: 8080  #本Service 的端口
+      targetPort: 8080  #容器端口
+#    - port: 9216  #本Service 的端口
+#      targetPort: 9216  #容器端口
+

@@ -1,0 +1,38 @@
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mariadb
+spec:
+  serviceName: mariadb
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mariadb
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+        - name: mariadb
+          image: mariadb:latest
+          imagePullPolicy: IfNotPresent  #IfNotPresent 本地没有镜像时候才拉取，Always 总是拉取 ，Never永远只用本地镜像，本地没有则报错
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mariadb
+
+spec:
+  selector:
+    app: mariadb
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - port: 3306
+      targetPort: 3306
+
+
+

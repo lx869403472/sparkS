@@ -1,0 +1,24 @@
+# kubectl apply -f deployment.yaml
+# kubectl get deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-at  #部署名字
+spec:
+  replicas: 2
+  # 用来查找关联的pods，所以标签都匹配才行
+  selector:
+    matchLabels:
+      app: test-at
+  #定义pod 相关数据
+  template:
+    metadata:
+      labels:
+        app: test-at
+    #定义容器 可以多个
+    spec:
+      containers:
+        - name: test-at  #容器名称
+          image: at:v1   # 镜像
+
+

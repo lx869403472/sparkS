@@ -1,0 +1,24 @@
+
+# kubectl apply -f service.yanl
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-ats
+spec:
+  selector:
+    app: test-at
+  type: NodePort
+  ports:
+    - port: 8080  #本转发在 集群内Service 的端口
+      name: test-at1   #必须要写
+      targetPort: 8080  #容器端口 Pod内的端口
+      nodePort: 30002   #转发在node 上的端口
+    - port: 9217
+      name: test-at2
+      targetPort: 9216
+      nodePort: 30216
+
+
+
+

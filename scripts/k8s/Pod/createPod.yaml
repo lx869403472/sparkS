@@ -1,0 +1,10 @@
+# kubectl run at2 --image=at:v1   #新建pods
+apiVersion: v1
+kind: Pod
+metadata:
+  name: at2
+spec:
+  containers:
+    - name: at2
+      image: at:v1
+
